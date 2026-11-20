@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en"><head><meta name="robots" content="noindex,nofollow"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>UIC Rooms 360</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@500;600&display=swap">
+<style>
+  /* Layout: one column of rooms, each a wrapping grid of 2:1 panorama thumbnails */
+  :root { --bg: #f2f4f3; --card: #ffffff; --ink: #1b2326; --muted: #5a676b; --line: #d9dfdd; --accent: #0f6b78;
+    --display: "Space Grotesk", "Segoe UI", system-ui, sans-serif; --body: Inter, "Segoe UI", system-ui, sans-serif; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg: #12181a; --card: #1c2427; --ink: #e7ecea;
+    --muted: #97a4a7; --line: #2b3538; --accent: #5cc0cc; color-scheme: dark; } }
+  :root[data-theme="dark"] { --bg: #12181a; --card: #1c2427; --ink: #e7ecea; --muted: #97a4a7; --line: #2b3538; --accent: #5cc0cc;
+    color-scheme: dark; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 15px; }
+  main { max-width: 1120px; margin: 0 auto; padding-block: 28px 48px;
+    padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+  h1 { font-family: var(--display); font-size: 28px; font-weight: 600; margin: 0 0 8px; text-wrap: balance; }
+  .lead { color: var(--muted); margin: 0; max-width: 64ch; line-height: 1.55; }
+  section { margin-top: 28px; }
+  h2 { font-family: var(--display); font-size: 18px; font-weight: 500; margin: 0 0 12px; padding-bottom: 8px;
+    border-bottom: 1px solid var(--line); display: flex; align-items: baseline; gap: 10px; }
+  h2 small { font-family: var(--body); font-size: 12px; font-weight: 400; color: var(--muted); letter-spacing: .04em; text-transform: uppercase; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(240px, 100%), 1fr)); gap: 14px; }
+  .card { display: block; background: var(--card); border: 1px solid var(--line); border-radius: 10px; overflow: hidden;
+    text-decoration: none; color: var(--ink); transition: transform .15s, border-color .15s; }
+  .card:hover { transform: translateY(-2px); border-color: var(--accent); }
+  .card:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .card img { display: block; width: 100%; max-width: 100%; aspect-ratio: 2 / 1; object-fit: cover; background: var(--line); }
+  .card span { display: block; padding: 9px 12px; font-weight: 600; font-size: 14px; }
+  .card span em { font-style: normal; font-weight: 400; color: var(--muted); margin-left: 6px; }
+  .card.ar { border-color: var(--accent); }
+  .card.ar img { filter: saturate(.6) brightness(.9); }
+  .note { margin-top: 32px; color: var(--muted); font-size: 13px; }
+  @media (prefers-reduced-motion: reduce) { .card { transition: none; } .card:hover { transform: none; } }
+</style></head><body>
+<main>
+<h1>UIC rooms &middot; 360&deg; views</h1>
+<p class="lead">Path-traced panoramas from the Revit 2026 models, at standing eye height (1.6 m). Open a view, then drag to
+look around and pinch or scroll to zoom. Point at an item (on a phone, turn it under the centre dot) to see its Revit
+name and how far away it is. Walk through opens the room model in AR on an iPhone: stand in an open space, let it
+find the floor, then walk into the room at real size.</p>
+<section><h2>CDU Patient Room <small>4 views</small></h2><div class="grid"><a class="card" href="UIC_CDU_Patient_pano_view1.html"><img src="UIC_CDU_Patient_pano_view1.jpg" alt="CDU Patient Room, view 1" loading="lazy"><span>View 1</span></a><a class="card" href="UIC_CDU_Patient_pano_view2.html"><img src="UIC_CDU_Patient_pano_view2.jpg" alt="CDU Patient Room, view 2" loading="lazy"><span>View 2</span></a><a class="card" href="UIC_CDU_Patient_pano_view3.html"><img src="UIC_CDU_Patient_pano_view3.jpg" alt="CDU Patient Room, view 3" loading="lazy"><span>View 3</span></a><a class="card" href="UIC_CDU_Patient_pano_view4.html"><img src="UIC_CDU_Patient_pano_view4.jpg" alt="CDU Patient Room, view 4" loading="lazy"><span>View 4</span></a><a class="card ar" rel="ar" href="UIC_CDU_Patient.usdz"><img src="UIC_CDU_Patient_pano_view1.jpg" alt="CDU Patient Room, walk-through model"><span>Walk through (iPhone AR) <em>20 MB</em></span></a></div></section><section><h2>CDU OBS Room <small>4 views</small></h2><div class="grid"><a class="card" href="UIC_CDU_OBS_pano_view1.html"><img src="UIC_CDU_OBS_pano_view1.jpg" alt="CDU OBS Room, view 1" loading="lazy"><span>View 1</span></a><a class="card" href="UIC_CDU_OBS_pano_view2.html"><img src="UIC_CDU_OBS_pano_view2.jpg" alt="CDU OBS Room, view 2" loading="lazy"><span>View 2</span></a><a class="card" href="UIC_CDU_OBS_pano_view3.html"><img src="UIC_CDU_OBS_pano_view3.jpg" alt="CDU OBS Room, view 3" loading="lazy"><span>View 3</span></a><a class="card" href="UIC_CDU_OBS_pano_view4.html"><img src="UIC_CDU_OBS_pano_view4.jpg" alt="CDU OBS Room, view 4" loading="lazy"><span>View 4</span></a><a class="card ar" rel="ar" href="UIC_CDU_OBS.usdz"><img src="UIC_CDU_OBS_pano_view1.jpg" alt="CDU OBS Room, walk-through model"><span>Walk through (iPhone AR) <em>21 MB</em></span></a></div></section><section><h2>ED Exam Room <small>4 views</small></h2><div class="grid"><a class="card" href="UIC_ED_Exam_pano_view1.html"><img src="UIC_ED_Exam_pano_view1.jpg" alt="ED Exam Room, view 1" loading="lazy"><span>View 1</span></a><a class="card" href="UIC_ED_Exam_pano_view2.html"><img src="UIC_ED_Exam_pano_view2.jpg" alt="ED Exam Room, view 2" loading="lazy"><span>View 2</span></a><a class="card" href="UIC_ED_Exam_pano_view3.html"><img src="UIC_ED_Exam_pano_view3.jpg" alt="ED Exam Room, view 3" loading="lazy"><span>View 3</span></a><a class="card" href="UIC_ED_Exam_pano_view4.html"><img src="UIC_ED_Exam_pano_view4.jpg" alt="ED Exam Room, view 4" loading="lazy"><span>View 4</span></a><a class="card ar" rel="ar" href="UIC_ED_Exam.usdz"><img src="UIC_ED_Exam_pano_view1.jpg" alt="ED Exam Room, walk-through model"><span>Walk through (iPhone AR) <em>29 MB</em></span></a></div></section>
+<p class="note">Ceiling height is assumed at 8'-0" until confirmed. Ceiling, light fixtures and bed linens are added for
+the visualisation; everything else comes from the Revit export.</p>
+</main>
+</body></html>
